@@ -37,4 +37,11 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm text-center">
+      <button class="btn btn-sm btn-secondary" (clink)="loaderMore()"></button>
+      <div class="spinner-border spinner-border-sm" *ngFor="loading"></div>
+      <!-- {{loading ? "Loading" : }} -->
+    </div>
+  </div>
 </div>

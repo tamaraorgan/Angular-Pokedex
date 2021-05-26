@@ -53,4 +53,9 @@ export class ListComponent implements OnInit {
       () => (this.loading = false)
     );
   }
+  ngOnDestroy(): void {
+    this.subscriptions.forEach((subscription) => {
+      subscription ? subscription.unsubscribe() : '';
+    });
+  }
 }
